@@ -11,10 +11,6 @@ import java.io.PrintWriter;
 @WebServlet("/getpost")
 public class Servlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-    }
-
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
 
         String parametr1 = request.getParameter("parametr1");
@@ -25,5 +21,9 @@ public class Servlet extends HttpServlet {
         out.println(parametr1);
         out.println(parametr2);
         out.println(parametr3);
+    }
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
     }
 }
